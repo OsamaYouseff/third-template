@@ -27,6 +27,17 @@ body {
 a {
   text-decoration: none;
 }
+p,
+a,
+li,
+h1,
+h2,
+h3,
+h4 {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
 
 /* global variables */
 :root {
@@ -89,7 +100,7 @@ a {
 }
 
 .dot {
-  background: url(/images/dots.png) no-repeat;
+  background: url(images/dots.png) no-repeat;
   position: absolute;
   max-width: 204px;
   height: 168px;
@@ -450,8 +461,8 @@ header .mega-menu .links li a i {
 
 /* start gallery */
 .gallery {
-  padding-top: calc(var(--sectionPadding-top) + 50px );
-  padding-bottom: calc(var(--sectionPadding-bottom) + 50px );
+  padding-top: calc(var(--sectionPadding-top) + 50px);
+  padding-bottom: calc(var(--sectionPadding-bottom) + 50px);
   position: relative;
   background-color: var(--sectionColor);
 }
@@ -805,8 +816,8 @@ header .mega-menu .links li a i {
 
 /* start services */
 .services {
-  padding-top: calc(var(--sectionPadding-top) + 50px );
-  padding-bottom: calc(var(--sectionPadding-bottom) + 50px );
+  padding-top: calc(var(--sectionPadding-top) + 50px);
+  padding-bottom: calc(var(--sectionPadding-bottom) + 50px);
   background-color: #ececec;
   position: relative;
 }
@@ -1494,7 +1505,7 @@ header .mega-menu .links li a i {
   padding-top: calc(var(--sectionPadding-top));
   padding-bottom: calc(var(--sectionPadding-bottom));
   position: relative;
-  background-image: url(/images/stats.jpg);
+  background-image: url(images/stats.jpg);
   background-size: cover;
   min-height: 300px;
 }
@@ -1592,7 +1603,7 @@ header .mega-menu .links li a i {
 
 .discount .left-sec {
   flex-basis: 50%;
-  background-image: url(/images/discount-background1.jpg);
+  background-image: url(images/discount-background1.jpg);
   background-size: cover;
   padding: 200px 100px;
   position: relative;
@@ -1903,10 +1914,10 @@ footer .footer {
 @keyframes change-back {
   0%,
   100% {
-    background-image: url(/images/discount-background1.jpg);
+    background-image: url(images/discount-background1.jpg);
   }
   50% {
-    background-image: url(/images/discount-background2.jpg);
+    background-image: url(images/discount-background2.jpg);
   }
 }
 /* animation */
