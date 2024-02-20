@@ -7,10 +7,13 @@ let hours = document.querySelector(".hours .num");
 let minutes = document.querySelector(".minutes .num");
 let seconds = document.querySelector(".seconds .num");
 
+let yearContainer = document.querySelector("#next-year");
+
 ///// getting  time unites
 
 setInterval(() => {
-  let dateTo2024 = new Date("1 Jan 2024 00:00:00 ").getTime();
+  let nextYear = new Date().getFullYear() + 1;
+  let dateTo2024 = new Date(`1 Jan ${nextYear} 00:00:00 `).getTime();
   let dateNow = new Date().getTime();
   let timeDifference = dateTo2024 - dateNow;
   let noOfDays = timeDifference / (1000 * 60 * 60 * 24);
@@ -23,11 +26,14 @@ setInterval(() => {
   noOfMinutes = Math.trunc(noOfMinutes);
   noOfSeconds = Math.trunc(noOfSeconds);
 
+
   //// adding time unites to their container in DOM
   days.innerHTML = noOfDays < 10 ? `0${noOfDays}` : noOfDays;
   hours.innerHTML = noOfHours < 10 ? `0${noOfHours}` : noOfHours;
   minutes.innerHTML = noOfMinutes < 10 ? `0${noOfMinutes}` : noOfMinutes;
   seconds.innerHTML = noOfSeconds < 10 ? `0${noOfSeconds}` : noOfSeconds;
+
+  yearContainer.textContent = nextYear;
 }, 1000);
 
 /////------------------------- /* Events counter down */  -------------------------
